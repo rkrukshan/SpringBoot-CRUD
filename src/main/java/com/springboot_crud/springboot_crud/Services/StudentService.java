@@ -19,5 +19,5 @@ public interface StudentService {
 
     List<StudentDto> findByAge(Integer age);
 
-    List<StudentDto> findNameDepartmentPhnoByGpa(Double gpa);
+    List<String> findNameDepartmentPhnoByGpa(Double gpa);
 }

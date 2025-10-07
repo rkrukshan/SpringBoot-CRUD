@@ -56,16 +56,18 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public List<StudentDto> findByAddress(String address) {
-        return List.of();
+        return repository.findByAddress(address).stream().map(StudentMapper::entitytodto).collect(Collectors.toList());
     }
 
     @Override
     public List<StudentDto> findByAge(Integer age) {
-        return List.of();
+        return repository.findByAge(age).stream().map(StudentMapper::entitytodto).collect(Collectors.toList());
     }
 
     @Override
-    public List<StudentDto> findNameDepartmentPhnoByGpa(Double gpa) {
-        return List.of();
+    public List<String> findNameDepartmentPhnoByGpa(Double gpa) {
+        return repository.findNameDepartmentPhnoByGpa(gpa);
     }
+
+
 }

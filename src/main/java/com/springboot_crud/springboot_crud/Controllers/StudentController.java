@@ -51,7 +51,7 @@ public ResponseEntity<StudentDto> createStudent(@RequestBody StudentDto dto){
 }
 
 @GetMapping("gpa")
-    public ResponseEntity <List<StudentDto>> findNameDepartmentPhnoByGpa(@RequestParam Double gpa){
+    public ResponseEntity <List<String>> findNameDepartmentPhnoByGpa(@RequestParam Double gpa){
     return ResponseEntity.ok(service.findNameDepartmentPhnoByGpa(gpa));
 }
 
