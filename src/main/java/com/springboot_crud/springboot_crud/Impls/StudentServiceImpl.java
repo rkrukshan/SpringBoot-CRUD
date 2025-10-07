@@ -53,4 +53,19 @@ public class StudentServiceImpl implements StudentService {
         Student student = repository.findById(sid).orElseThrow(()->new ResourceNotFoundException("ID is not Found "+sid));
         repository.deleteById(sid);
     }
+
+    @Override
+    public List<StudentDto> findByAddress(String address) {
+        return List.of();
+    }
+
+    @Override
+    public List<StudentDto> findByAge(Integer age) {
+        return List.of();
+    }
+
+    @Override
+    public List<StudentDto> findNameDepartmentPhnoByGpa(Double gpa) {
+        return List.of();
+    }
 }
