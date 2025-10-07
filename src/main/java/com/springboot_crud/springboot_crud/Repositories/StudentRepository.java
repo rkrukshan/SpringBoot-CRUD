@@ -10,7 +10,7 @@ import java.util.List;
 public interface StudentRepository extends JpaRepository<Student,Integer> {
 
     @Query("SELECT s FROM Student s WHERE s.address = :address")
-    List<Student> findByAddress(@Param("Address") String address);
+    List<Student> findByAddress(@Param("address") String address);
 
     @Query("SELECT s FROM Student s WHERE s.age= :age")
     List<Student> findByAge(@Param("age") Integer age);
