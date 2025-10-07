@@ -40,5 +40,20 @@ public ResponseEntity<StudentDto> createStudent(@RequestBody StudentDto dto){
         return ResponseEntity.ok("Deleted Successfully");
     }
 
+@GetMapping("address")
+    public ResponseEntity<List<StudentDto>> findByAddress(@RequestParam String address){
+    return ResponseEntity.ok(service.findByAddress(address));
+}
+
+@GetMapping("age")
+    public ResponseEntity<List<StudentDto>> findByAge(@RequestParam Integer age){
+    return ResponseEntity.ok(service.findByAge(age));
+}
+
+@GetMapping("gpa")
+    public ResponseEntity <List<StudentDto>> findNameDepartmentPhnoByGpa(@RequestParam Double gpa){
+    return ResponseEntity.ok(service.findNameDepartmentPhnoByGpa(gpa));
+}
+
 
 }
