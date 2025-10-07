@@ -7,10 +7,12 @@ import com.springboot_crud.springboot_crud.Models.Student;
 import com.springboot_crud.springboot_crud.Repositories.StudentRepository;
 import com.springboot_crud.springboot_crud.Services.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class StudentServiceImpl implements StudentService {
 @Autowired
     StudentRepository repository;
