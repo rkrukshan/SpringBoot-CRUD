@@ -14,4 +14,10 @@ public interface StudentService {
     StudentDto updateStudent(Integer sid, StudentDto dto);
 
     void deleteStudent(Integer sid);
+
+    List<StudentDto> findByAddress(String address);
+
+    List<StudentDto> findByAge(Integer age);
+
+    List<StudentDto> findNameDepartmentPhnoByGpa(Double gpa);
 }
