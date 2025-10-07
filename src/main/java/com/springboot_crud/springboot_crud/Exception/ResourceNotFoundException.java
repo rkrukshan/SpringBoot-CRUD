@@ -1,8 +1,8 @@
 package com.springboot_crud.springboot_crud.Exception;
 
-public class ResourceNotFoundException extends Exception {
+public class ResourceNotFoundException extends RuntimeException  {
 
-    ResourceNotFoundException(String message){
+    public ResourceNotFoundException(String message){
         super(message);
     }
 
