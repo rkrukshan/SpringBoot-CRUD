@@ -20,7 +20,7 @@ public class Student {
     private int age;
     private String email;
     private String department;
-    private String gpa;
+    private double gpa;
     private long phno;
     private String address;
 }

@@ -13,7 +13,7 @@ public class StudentDto {
     private int age;
     private String email;
     private String department;
-    private String gpa;
+    private double gpa;
     private long phno;
     private String address;
 }
