@@ -21,6 +21,6 @@ public class Student {
     private String email;
     private String department;
     private String gpa;
-    private int phno;
+    private long phno;
     private String address;
 }
