@@ -41,7 +41,7 @@ public class StudentServiceImpl implements StudentService {
         student.setName(dto.getName());
         student.setAge(dto.getAge());
         student.setEmail(dto.getEmail());
-        student.setDepartment(dto.getGpa());
+        student.setDepartment(dto.getDepartment());
         student.setGpa(dto.getGpa());
         student.setPhno(dto.getPhno());
         student.setAddress(dto.getAddress());
