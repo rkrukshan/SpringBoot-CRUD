@@ -16,7 +16,7 @@ public class TeacherController {
 
 @PostMapping("create")
 public ResponseEntity <TeacherDto> createTeacher(@RequestBody TeacherDto dto){
-    return ResponseEntity.status(200).body(service.creaateTeacher(dto));
+    return ResponseEntity.status(200).body(service.createTeacher(dto));
 }
 
 @GetMapping("{tid}")
