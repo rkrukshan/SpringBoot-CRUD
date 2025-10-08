@@ -62,4 +62,11 @@ public class TeacherServiceImpl implements TeacherService {
         return repository.finddeptTeachersAndStudentsInnerJoin();
     }
 
+    @Override
+    public List<Object[]> findTeachersAndStudentsRightJoin() {
+        return repository.findTeachersAndStudentsRightJoin();
+    }
+
+
+
 }

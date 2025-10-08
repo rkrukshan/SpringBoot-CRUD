@@ -50,4 +50,9 @@ public ResponseEntity <TeacherDto> createTeacher(@RequestBody TeacherDto dto){
     public ResponseEntity<List<Object[]>> findTeachersAndStudentsInnerJoin(){
     return ResponseEntity.ok(service.finddeptTeachersAndStudentsInnerJoin());
 }
+
+@GetMapping("join/right")
+    public ResponseEntity<List<Object[]>> findTeachersAndStudentsRightJoin(){
+    return ResponseEntity.ok(service.findTeachersAndStudentsRightJoin());
+}
 }

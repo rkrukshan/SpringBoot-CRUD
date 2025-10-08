@@ -19,4 +19,7 @@ public interface TeacherService {
 
 
     List<Object[]> finddeptTeachersAndStudentsInnerJoin();
+
+
+    List<Object[]> findTeachersAndStudentsRightJoin();
 }
