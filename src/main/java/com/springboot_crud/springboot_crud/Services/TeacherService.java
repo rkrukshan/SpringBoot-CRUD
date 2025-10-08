@@ -14,4 +14,6 @@ public interface TeacherService {
     TeacherDto updateTeacher(Integer tid, TeacherDto dto);
 
     void deleteTeacher(Integer tid);
+
+    List<TeacherDto> searchTeacher(String name);
 }

@@ -51,4 +51,9 @@ public class TeacherServiceImpl implements TeacherService {
     Teacher teacher = repository.findById(tid).orElseThrow(()->new ResourceNotFoundException("ID is not Found "+tid));
     repository.deleteById(tid);
     }
+
+    @Override
+    public List<TeacherDto> searchTeacher(String name) {
+        return repository.searchTeacherByName(name).stream().map(TeacherMapper::entitytodto).collect(Collectors.toList());
+    }
 }

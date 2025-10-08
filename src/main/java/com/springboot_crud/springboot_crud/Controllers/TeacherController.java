@@ -40,4 +40,9 @@ public ResponseEntity <TeacherDto> createTeacher(@RequestBody TeacherDto dto){
     service.deleteTeacher(tid);
     return ResponseEntity.ok("Deleted Successfully");
 }
+
+@GetMapping("search")
+    public ResponseEntity<List<TeacherDto>> searchTeacher(@RequestParam String name){
+    return ResponseEntity.ok(service.searchTeacher(name));
+}
 }
