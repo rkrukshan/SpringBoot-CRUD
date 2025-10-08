@@ -22,4 +22,6 @@ public interface TeacherService {
 
 
     List<Object[]> findTeachersAndStudentsRightJoin();
+
+    List<Object[]> findTeachersAndStudentsLeftJoin();
 }

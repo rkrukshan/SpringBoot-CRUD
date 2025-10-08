@@ -17,4 +17,7 @@ public interface TeacherRepository extends JpaRepository<Teacher,Integer> {
     @Query("SELECT s,t FROM Teacher t RIGHT JOIN Student s ON t.department = s.department")
     List<Object[]>findTeachersAndStudentsRightJoin();
 
+    @Query("SELECT s,t FROM Teacher t LEFT JOIN Student s ON t.department = s.department")
+    List<Object[]>findTeachersAndStudentsLeftJoin();
+
 }

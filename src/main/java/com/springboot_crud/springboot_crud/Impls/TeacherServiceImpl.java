@@ -7,6 +7,7 @@ import com.springboot_crud.springboot_crud.Models.Teacher;
 import com.springboot_crud.springboot_crud.Repositories.TeacherRepository;
 import com.springboot_crud.springboot_crud.Services.TeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -67,6 +68,10 @@ public class TeacherServiceImpl implements TeacherService {
         return repository.findTeachersAndStudentsRightJoin();
     }
 
+    @Override
+    public List<Object[]> findTeachersAndStudentsLeftJoin() {
+        return repository.findTeachersAndStudentsLeftJoin();
+    }
 
 
 }

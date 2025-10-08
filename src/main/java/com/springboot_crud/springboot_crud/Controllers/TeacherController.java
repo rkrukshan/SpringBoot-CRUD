@@ -55,4 +55,9 @@ public ResponseEntity <TeacherDto> createTeacher(@RequestBody TeacherDto dto){
     public ResponseEntity<List<Object[]>> findTeachersAndStudentsRightJoin(){
     return ResponseEntity.ok(service.findTeachersAndStudentsRightJoin());
 }
+
+@GetMapping("join/left")
+    public ResponseEntity<List<Object[]>> findTeachersAndStudentsLeftJoin(){
+    return ResponseEntity.ok(service.findTeachersAndStudentsLeftJoin());
+}
 }
