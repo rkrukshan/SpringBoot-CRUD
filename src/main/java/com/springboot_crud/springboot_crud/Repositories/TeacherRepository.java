@@ -10,4 +10,7 @@ import java.util.List;
 public interface TeacherRepository extends JpaRepository<Teacher,Integer> {
     @Query("SELECT t FROM Teacher t WHERE LOWER(t.name) LIKE LOWER(CONCAT('%',:name,'%'))")
     List<Teacher> searchTeacherByName(@Param("name") String name);
+
+    @Query("SELECT s,t FROM Teacher t INNER JOIN Student s ON t.department = s.department")
+    List<Object[]>finddeptTeachersAndStudentsInnerJoin();
 }

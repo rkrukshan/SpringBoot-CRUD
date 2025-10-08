@@ -56,4 +56,10 @@ public class TeacherServiceImpl implements TeacherService {
     public List<TeacherDto> searchTeacher(String name) {
         return repository.searchTeacherByName(name).stream().map(TeacherMapper::entitytodto).collect(Collectors.toList());
     }
+
+    @Override
+    public List<Object[]> finddeptTeachersAndStudentsInnerJoin() {
+        return repository.finddeptTeachersAndStudentsInnerJoin();
+    }
+
 }

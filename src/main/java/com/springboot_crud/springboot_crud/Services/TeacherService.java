@@ -16,4 +16,7 @@ public interface TeacherService {
     void deleteTeacher(Integer tid);
 
     List<TeacherDto> searchTeacher(String name);
+
+
+    List<Object[]> finddeptTeachersAndStudentsInnerJoin();
 }
